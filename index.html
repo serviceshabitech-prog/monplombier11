@@ -1,134 +1,30 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="theme-color" content="#0f0f13" />
-  <title>Plombier Urgence – Département 11 (Aude) – Appel immédiat 24/7</title>
-  <meta name="description" content="Plombier en urgence dans le département 11 (Aude). Fuite d’eau, débouchage, WC, chauffe-eau. Intervention rapide 24/7. Appelez maintenant." />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MonPlombier11</title>
 
-  <link rel="stylesheet" href="/styles.css?v=1" />
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <!-- HEADER -->
-  <header class="topbar">
-    <div class="brand">
-      <div class="brand__name">Plombier Urgence – Dép. 11</div>
-      <div class="brand__sub">24h/24 • 7j/7 • Intervention rapide • Aude (11)</div>
-    </div>
 
-    <!-- ⚠️ Remplace le numéro si besoin -->
-    <a class="btn btn--call btn--callLight" href="tel:0756833656">
-      📞 07 56 83 36 56
-    </a>
-  </header>
+<header>
+    <h1>MonPlombier11</h1>
+    <p>Plombier rapide et efficace</p>
+</header>
 
-  <main class="wrap">
-    <!-- HERO -->
-    <section class="card hero">
-      <div class="pill">🚨 Urgence plomberie • Département 11 (Aude)</div>
+<section class="hero">
+    <h2>Dépannage plomberie 24h/24</h2>
+    <button onclick="afficherMessage()">Tester le site</button>
+    <p id="message"></p>
+</section>
 
-      <h1>Dépannage plomberie 24/7 dans le 11</h1>
-      <p class="lead">
-        Fuite d’eau • Dégât des eaux • Débouchage WC/évier • Chauffe-eau • Robinetterie
-      </p>
+<footer>
+    © 2026 MonPlombier11.fr
+</footer>
 
-      <a class="phonebox" href="tel:0756833656">
-        <div class="phonebox__label">Appelez maintenant</div>
-        <div class="phonebox__number">07 56 83 36 56</div>
-      </a>
-
-      <div class="ctaRow">
-        <a class="btn btn--call btn--callLight btn--wide" href="tel:0756833656">
-          📞 Appel immédiat
-        </a>
-        <a class="btn btn--sms btn--wide" href="#form">✉️ SMS rapide</a>
-      </div>
-
-      <div class="trustRow">
-        <div class="trustItem">⏱️ Réponse immédiate</div>
-        <div class="trustItem">🌙 Nuit / week-end</div>
-        <div class="trustItem">📍 Dép. 11 (Aude)</div>
-      </div>
-    </section>
-
-    <!-- FORM SMS -->
-    <section class="card" id="form">
-      <h2 class="h2">Demande par SMS</h2>
-      <p class="muted">Le message s’ouvre automatiquement dans votre application SMS.</p>
-
-      <form id="leadForm" class="form">
-        <label class="field">
-          <span>Nom</span>
-          <input id="name" type="text" placeholder="Votre nom">
-        </label>
-
-        <label class="field">
-          <span>Votre numéro</span>
-          <input id="phone" type="tel" placeholder="06 00 00 00 00" required>
-        </label>
-
-        <label class="field">
-          <span>Ville (Département 11)</span>
-          <input id="city" type="text" placeholder="Carcassonne, Narbonne, Castelnaudary…">
-        </label>
-
-        <label class="field">
-          <span>Problème</span>
-          <textarea id="problem" placeholder="Ex : fuite sous évier, WC bouché, chauffe-eau..."></textarea>
-        </label>
-
-        <button class="btn btn--sms btn--wide" type="submit">
-          Envoyer par SMS
-        </button>
-
-        <a class="btn btn--call btn--callLight btn--wide" href="tel:0756833656">
-          📞 Appeler (plus rapide)
-        </a>
-      </form>
-    </section>
-
-    <!-- POURQUOI -->
-    <section class="card card--dark">
-      <h2 class="h2">Pourquoi nous appeler ?</h2>
-      <div class="bullets">
-        <div class="bullet">✅ Intervention rapide (urgence)</div>
-        <div class="bullet">✅ Explications claires avant action</div>
-        <div class="bullet">✅ Travail propre, solutions durables</div>
-      </div>
-    </section>
-
-    <!-- LIENS LEGAUX -->
-    <section class="card">
-      <div class="bullets">
-        <a class="bullet" href="https://www.habitech-services.fr/politique-de-confidentialite/">
-          🔒 Politique de confidentialité
-        </a>
-        <a class="bullet" href="https://www.habitech-services.fr/mentions-legales/">
-          📄 Mentions légales
-        </a>
-        <a class="bullet" href="https://www.habitech-services.fr/">
-          🤝 Nos partenaires
-        </a>
-      </div>
-    </section>
-
-    <footer class="footer">
-      © <span id="year"></span> monplombier11.fr
-    </footer>
-  </main>
-
-  <!-- STICKY -->
-  <div class="sticky">
-    <a class="sticky__btn sticky__btn--call" href="tel:0756833656">
-      📞 Appel immédiat
-    </a>
-    <a class="sticky__btn sticky__btn--sms" href="#form">
-      ✉️ SMS
-    </a>
-  </div>
-
-  <script src="/script.js?v=1"></script>
+<script src="script.js"></script>
 </body>
 </html>
