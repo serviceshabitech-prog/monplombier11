@@ -1,41 +1,45 @@
-(function () {
-  const yearEl = document.getElementById("year");
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f7fa;
+    text-align:center;
+}
 
-  const form = document.getElementById("leadForm");
-  if (!form) return;
+header{
+    background:#1976d2;
+    color:white;
+    padding:30px;
+}
 
-  // ⚠️ Remplace le numéro si besoin
-  const smsNumber = "0756833656";
-  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+.hero{
+    margin-top:80px;
+}
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
+button{
+    padding:14px 24px;
+    border:none;
+    border-radius:8px;
+    background:#1976d2;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
 
-    const name = (document.getElementById("name")?.value || "").trim();
-    const phone = (document.getElementById("phone")?.value || "").trim();
-    const city = (document.getElementById("city")?.value || "").trim();
-    const problem = (document.getElementById("problem")?.value || "").trim();
+button:hover{
+    background:#0d47a1;
+}
 
-    const msg =
-      `Bonjour, j'ai besoin d'un plombier.\n` +
-      `Nom : ${name || "—"}\n` +
-      `Département : 11 (Aude)\n` +
-      `Ville : ${city || "—"}\n` +
-      `Problème : ${problem || "—"}\n` +
-      `Téléphone : ${phone || "—"}`;
+footer{
+    position:fixed;
+    bottom:0;
+    width:100%;
+    background:#222;
+    color:white;
+    padding:15px;
+}
 
-    const encoded = encodeURIComponent(msg);
-
-    const url = isIOS
-      ? `sms:${smsNumber}?&body=${encoded}`
-      : `sms:${smsNumber}?body=${encoded}`;
-
-    const a = document.createElement("a");
-    a.href = url;
-    a.style.display = "none";
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-  });
-})();
+#message{
+    margin-top:20px;
+    font-weight:bold;
+}
